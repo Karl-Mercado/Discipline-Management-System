@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OSA-Discipline Management System</title>
+    <link rel="stylesheet" href="noticeform.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+
+<body>
+<header>
+    <div class="logo">
+        <img src="Assets/hau_logo.png" alt="HAU Logo">
+    </div>
+    <nav>
+        <a href="http://localhost/OSA_DS/frontend/client-web/home.html">HOME</a>
+        <a href="http://localhost/OSA_DS/frontend/client-web/violation.html">VIOLATIONS</a>
+        <div class="dropdown">
+            <button class="dropbtn">FORMS</button>
+            <div class="dropdown-content">
+                <a href="http://localhost/OSA_DS/frontend/client-web/complaintform.html">Complaint form</a>
+                <a href="http://localhost/OSA_DS/frontend/client-web/noticeform.html">Notice to explain form</a>
+            </div>
+        </div>
+        <a href="http://localhost/OSA_DS/frontend/client-web/login.html"><i class="fas fa-user"></i> LOGIN</a>
+    </nav>
+</header>
+
+<section class="complaint-form">
+    
+        <form action="noticeform.php" method="post">
+          <h2>NOTICE TO EXPLAIN FORM</h2><br>
+
+          <label for="name">Name of Respondent:</label>
+          <input type="text" id="ViolatorName" name="ViolatorName" placeholder="eg.Dela Cruz Juan D." required>
+
+
+          <label for="Department">Department:</label>
+          <select id="Department" name="Department" required>
+              <option value="0">Select</option>
+              <option value="1">School of Computing</option>
+              <option value="2">School of Business and Accountancy</option>
+              <option value="3">School of Education</option>
+              <option value="4">School of  Engineering and Architecture</option>
+              <option value="5">School of Nursing and Allied Medical Sciences</option>
+              <option value="6">School of Hospitality and Tourism Management</option>
+              <option value="7">College of Criminal Justice Education and Forencics</option>
+          </select>
+
+          <label for="Contact">Contact No.:</label>
+          <input type="tel" id="Contact" name="Contact" required>
+  
+          <label for="CourseYear">Course-year:</label>
+          <select id="CourseYear" name="CourseYear" required>
+              <option value="0">Select</option>
+              <option value="1">1st Year</option>
+              <option value="2">2nd Year</option>
+              <option value="3">3rd Year</option>
+              <option value="4">4th Year</option>
+          </select>
+  
+          <label for="StudentNum">Student No.:</label>
+          <input type="text" id="StudentNum" name="StudentNum" required>
+  
+          <label for="Date">Date:</label>
+          <input type="date" id="Date" name="Date" required><br>
+
+          <label for="complaint-file">Upload PDF File:</label>
+          <input type="file" id="complaint-file" name="complaint-file" accept=".pdf">
+
+          <label>Explanation Details: </label>
+          <textarea id="ExplanationDetails" name="ExplanationDetails" rows="4" required></textarea>
+
+          <input type="submit" value="Submit">
+          
+
+      </form>
+</section>
+
+<script>
+     window.onload = function() {
+        // Get URL parameters
+        const urlParams = new URLSearchParams(window.location.search);
+        const success = urlParams.get('success');
+
+        // Check if success parameter is true
+        if (success === 'true') {
+            // Display alert
+            alert("Form submitted successfully!");
+
+            // Update the complaint navigation item to show the notification badge
+            const complaintNavItem = document.querySelector('nav a[href="http://localhost/OSA_DS/frontend/client-web/admin_index.php"]');
+            complaintNavItem.innerHTML += '<span class="badge">1</span>';
+        }
+    };
+</script>
+
+</body>
+</html>

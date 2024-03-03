@@ -1,0 +1,351 @@
+body {
+    position: relative;
+    background-size: cover; /* Cover the entire background */
+    background-position: center; /* Center the background image */
+    background-repeat: no-repeat; /* Prevent background image from repeating */
+    background-image: url('Assets/complaint_background.jpg');
+    height:100vh;
+}
+
+.header {
+    background-color: maroon;
+    color: rgb(242, 242, 242);
+    padding: 20px;
+    text-align: left;
+    height: 100vh;
+    width: 15%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    overflow-y: auto; /* Enable scrolling if content overflows */
+}
+
+.header h1 {
+    font-size: 30px;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-bottom: 100px; /* Adjusted margin */
+}
+
+.user-icon {
+    text-align: center;
+    font-size: 90px;
+    margin-top: 50px; /* Adjusted margin */
+}
+
+.navigation ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.navigation li {
+    margin-right: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 30px;
+}
+
+.navigation li a {
+    text-decoration: none;
+    color: #eee9e9;
+    transition: color 0.3s ease;
+    line-height: 2.9;
+}
+
+.navigation ul li i {
+    margin-right: 30px;
+}
+
+.navigation ul li:hover {
+    background-color: #f0f0f06f;
+}
+
+/* Styles for the table */
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.table th,
+.table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+     
+}
+
+.table th {
+    background-color: #f2f2f2;
+    color: #333;
+    font-weight: bold;
+}
+
+.table tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.table tbody tr:hover {
+    background-color: #ddd;
+}
+
+img.header-image{
+    margin-left: 800px;
+    width:550px;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 100%;
+}
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* 
+.filter-search {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    width: 200px;
+    box-sizing: border-box;
+}
+
+
+.btn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #45a049;
+}
+
+
+.view-btn {
+    background-color: #008CBA;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.view-btn:hover {
+    background-color: #005f6b;
+}
+
+*/
+
+input[type="submit"] {
+    width: 7%;
+    height: 40px;
+}
+
+
+/* Style for view button */
+input[type="text"] {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    width: 300px;
+    box-sizing: border-box;
+}
+
+input[type="submit"] {
+    background-color: #00ba65db;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #00ba5d;
+}
+
+button {
+    background-color: #0074ba;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #005f6b;
+}
+
+.button-container {
+    margin-top: 5vh;
+    display: flex; /* Use flexbox for alignment */
+    align-items: center; /* Center items vertically */
+}
+
+.button-container button {
+    margin: 0 10px; /* Add some spacing between the buttons */
+    color: white; /* Text color */
+    border: none; /* Remove button border */
+    padding: 8px 16px; /* Add padding to the buttons */
+    border-radius: 4px; /* Add rounded corners */
+    cursor: pointer; /* Add pointer cursor */
+    height: 50px;
+    width: auto;
+}
+
+.button-container button:nth-child(1) {
+    background-color: #069052; /* Green background for the first button (Approve) */
+    font-size:21px;
+}
+
+.button-container button:nth-child(2) {
+    background-color: rgb(221, 30, 30); /* Red background for the second button (Reject) */
+     font-size:21px;
+}
+
+.button-container button:hover {
+    filter: brightness(80%); /* Dim the button brightness on hover */
+}
+
+
+.select-container {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 10px;
+}
+ 
+/* Style for the Classification select */
+.table select {
+    width: 100%; /* Make the select element fill the entire cell */
+    padding: 8px 12px;
+    font-size: 21px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    appearance: none; /* Remove default arrow icon */
+    -webkit-appearance: none; /* Remove default arrow icon for Safari */
+    background-color: #fff;
+    cursor: pointer;
+}
+
+/* Style for the Classification select options */
+.table select option {
+    padding: 8px 12px;
+    font-size: 21px;
+    background-color: #fff;
+}
+
+/* Style for the Classification select when focused */
+.table select:focus {
+    outline: none;
+    border-color: #066edd; /* Change border color when focused */
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25); /* Add focus shadow */
+}
+
+/* Style for the submit button next to the Classification select */
+.table button {
+    margin-top: 5px; /* Add some space between the select and the button */
+    padding: 8px 16px;
+    font-size: 21px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    background-color: #066edd;
+    color: #fff;
+    height: 48px;
+    width: auto
+}
+
+/* Style for the submit button on hover */
+.table button:hover {
+    background-color: #0056b3;
+}
+
+button.btn.btn-primary {
+    width: 20%;
+    height: 43px;
+    background-color:rgb(8, 176, 114);
+    margin-right:80px;
+}
+ 
+span.input-group-text {
+    height: 44px;
+}
+
+/* Style for the badge */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px; /* Add some space below the table */
+}
+
+th, td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #f2f2f2; /* Light gray background for table headers */
+}
+
+/* Increase font size for table headers */
+th {
+    font-size: 22px;
+}
+
+/* Increase font size for table cells */
+td {
+    font-size: 22px;
+}
+
+input.form-control {
+    height:60px;
+    font-size:20px;
+     
+}
+
+button.btn.btn-primary {
+     height:60px;
+    font-size:20px;
+    
+}
+
+span.input-group-text {
+     height:60px;
+    font-size:20px;
+}
+
+
+

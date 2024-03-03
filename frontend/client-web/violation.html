@@ -1,0 +1,915 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OSA-Discipline Management System</title>
+    <link rel="stylesheet" href="violation.css"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+
+<body>
+  <header>
+    <div class="logo">
+        <img src="Assets/hau_logo.png" alt="HAU Logo">
+    </div>
+    <nav>
+      <a href="http://localhost/OSA_DS/frontend/client-web/home.html">HOME</a>
+      <a href="http://localhost/OSA_DS/frontend/client-web/violation.html">VIOLATIONS</a>
+      <div class="dropdown">
+        <button class="dropbtn">FORMS</button>
+        <div class="dropdown-content">
+            <a href="http://localhost/OSA_DS/frontend/client-web/complaintform.html">Complaint form</a>
+            <a href="http://localhost/OSA_DS/frontend/client-web/noticeform.html">Notice to explain form</a>
+        </div>
+    </div>
+    <a href="http://localhost/OSA_DS/frontend/client-web/login.html"><i class="fas fa-user"></i> LOGIN</a>
+    </nav>
+</header>
+
+<section>
+  <div class="container">
+    <nav class="navbar">
+        <a href="#" onclick="changeContent('PhilLaw', this)">Philippine Laws</a>
+        <a href="#" onclick="changeContent('UniVMem', this)">University's community members & properties</a>
+        <a href="#" onclick="changeContent('UnivPoli', this)">University policies</a>
+        <a href="#" onclick="changeContent('Library', this)">Library Offences</a>   
+    </nav>
+    <div class="content" id="PhilLaw-content">
+      <div class="title">
+        <h1>Offenses against Philippine Laws, Rules and Regulations</h1>
+      </div>
+      <table class="my-table">
+        <thead>
+            <tr>
+                <th>Offenses</th>
+                <th>Sanctions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>A.1. Violation of Dangerous Drugs Law and other
+                  related laws, including but not limited to sale,
+                  use or possession of prohibited drugs and
+                  paraphernalia within or outside the University
+                  premises.</td>
+                <td>From Suspension to Exclusion for
+                  users and from Exclusion to
+                  Expulsion for pushers, depending
+                  on the gravity of the offense
+                  </td>
+            </tr>
+
+            <tr>
+                <td>A.2. Violation of Anti-Hazing Law under RA 8044,
+                  either within or outside the University premises</td>
+                <td>From Suspension to Expulsion
+                  depending on the gravity of the
+                  offense
+                  </td>
+            </tr>
+
+            <tr>
+              <td>A.3. Sexual misconduct (Unwelcome sexual
+                behavior / unwelcome sexual remarks)
+              </td>
+              <td>From Exclusion to Expulsion
+                depending on the gravity of the
+                offense
+              </td>          
+            </tr>
+          
+            <tr>
+              <td>A.4. Conviction of a criminal offense.
+              </td>
+              <td>From Exclusion to Expulsion
+                depending on the gravity of the
+                offense
+              </td>
+            </tr>
+          
+            <tr>
+              <td> A.5.Disgracefulor immoralconduct, indecencyor
+              moral in discretion committed within and outside
+              the University premises</td>
+              <td>From Suspension to Exclusion
+              depending on the gravityof the
+              offense
+              </td>
+            </tr>
+        
+            <tr>
+              <td> A.6. Possession of firearms, explosives and/or
+              deadly weapons within the University premises
+              or at any University function outside the
+              campus</td>
+              <td> From Suspension to Exclusion
+              depending on the gravityof the
+              offense
+              </td>
+            </tr>
+       
+            <tr>
+              <td>A.7 Commission of other offenses within the
+                campus punishable under the Revised Penal
+                Code
+              </td>
+              <td>From Suspension to Expulsion
+                 depending on thegravityof the
+                 offense
+              </td>
+            </tr>
+      
+            <tr>
+              <td>A.8.Gambling in any form.
+              </td>
+              <td> From Undertaking to Exclusion
+                depending on the gravityof the
+                offense
+              </td>
+            </tr>
+      
+            <tr>
+              <td> A.9. Viewing, possessing, and distributing
+                pornographic and subversive materials(onthe
+                internet, print media, video, compact disc)
+                within the campus</td>
+              <td>From Suspension to Exclusion
+                depending on the gravity of the
+                offense
+              </td>
+            </tr>
+    
+            <tr>
+              <td>A.10. Violation of the CampusJournalismAct
+                (AppendixD)</td>
+              <td>To be referred to the Grievance
+                Committee that will be created by
+                the Office of Student Affairs
+                (OSA)
+              </td>
+            </tr>
+
+            <tr>
+              <td>A.11. R.A. 10173 - Data Privacy Act of 2012
+                Violation of Data Privacy Law
+              </td>
+              <td>From Suspension to Expulsion
+                depending on the gravity of the
+                offense
+                </td>
+            </tr>
+          
+            <tr>
+              <td> A.12.Violation of R.A. 9514 Sec. 8 (i) a.k.a. Fire
+                Code of the Phil. 2008 Giving false or malicious
+                fire alarms is prohibited.
+              </td>
+              <td>From Suspension to Expulsion
+                depending on the gravity of the
+                offense
+                </td>
+            </tr>
+
+            <tr>
+              <td>A.13.Violation of R.A 11313 or the "Safe Streets
+                and Public Spaces Act" seeks to prevent
+                gender-based sexual harassment from
+                occurring in streets, public places, online
+                workplaces, and educational and training
+                institutions. a.k.a Bawal Bastos Law( cursing,
+                wolf-whistling, catcalling, leering and intrusive
+                gazing etc.).</td>
+              <td> From Suspension to Expulsion
+                depending on thegravityof the
+                offense
+                </td>
+            </tr>
+
+            <tr>
+              <td> A.14 PD. 1727 Declaring as unlawful the malicious
+                dissemination of false information of the willful
+                making any threat concerning Bombs,
+                Explosive or any similar device or means of
+                destruction.
+              </td>
+              <td>From Suspension to Expulsion
+                depending on the gravity of the
+                offense
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
+    </div>
+
+    <div class="content" id="UniVMem-content">
+      <div class="title">
+        <h1>Offenses against the University, its community members and its properties</h1>
+      </div>
+      <table class="my-table">
+        <thead>
+            <tr>
+                <th>Offenses</th>
+                <th>Sanctions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>B.1. Use of University name, property, or
+                  equipment for personal and/or commercial
+                  purposes or misrepresenting authority for and
+                  on behalf of the University.
+                </td>
+                <td>From Suspension to Exclusion
+                  depending on the gravity of the
+                  offense
+                </td>
+            </tr>
+
+            <tr>
+                <td>B.2.Any act which tends to discredit or malign the
+                  name of the University.
+                </td>
+                <td>From Suspension to Exclusion
+                  depending on the gravity of the
+                  offense
+                </td>
+            </tr>
+
+            <tr>
+              <td>B.3. Theft of the property of the University or any
+                member of the University community.
+              </td>
+              <td>From Suspension to Exclusion
+                depending on the gravity of the
+                offense                
+                </td>
+            </tr>
+
+            <tr>
+              <td>B.4. Making malicious, obscene or libelous
+                statements about the person or vulgar
+                language, gossips, anecdotes and insulting
+                words or willful disrespect or any act of
+                discourtesy to any member of the University
+                community or any person transacting business
+                with the University within the campus or at
+                official functions.
+              </td>
+              <td>From Suspension to Exclusion
+                depending on the gravity of the
+                offense
+                </td>
+            </tr>
+
+            <tr>
+              <td>B.5. Inflicting bodily injury to any member of the
+                University Community.
+              </td>
+              <td>From Suspension to Exclusion
+                depending on the gravity of the
+                offense
+              </td>
+          </tr>
+
+          <tr>
+              <td>B.6.Embezzlement, malversation, and/or
+                misappropriation of the funds or assets of the
+                University and its duly recognized student
+                councils, publications, and organizations
+              </td>
+              <td>From Suspension to Exclusion
+                depending on the gravity of the
+                offense
+              </td>
+          </tr>
+
+          <tr>
+            <td>B.7 Any act of falsification, declaration of
+              untruthful statement or testimony, tampering,
+              change and/or forgery committed on
+              document/s and/or record/s includingbut not
+              limited to that faculty grading records,student
+              records,vouchers, receipts, tickets and the like
+              for reimbursement of expenses or other school
+              records, unauthorized use of scanned signature of university officials and/or
+              possession of falsified or tampered document/s
+              and/or record/ s; plagiarism; violation of
+              intellectual property rights.
+            </td>
+            <td>From Suspension to Exclusion
+              depending on the gravity of the
+              offense                
+              </td>
+          </tr>
+
+          <tr>
+            <td> B.8.Fraud or willful breach of trust in the conduct
+              of one's job/responsibility.
+            </td>
+            <td>From Suspension to Exclusion
+              depending on the gravity of the
+              offense
+              </td>
+          </tr>
+
+
+          <tr>
+            <td> B.9. Negligence/infraction of University
+              rules/procedures that results in loss, damage,
+              and/or harm to school property/personor that
+              compromises the safety of members of the
+              University community
+            </td>
+            <td>From Undertaking to Exclusion
+              depending on the gravity of the
+              offense
+              </td>
+          </tr>
+
+          <tr>
+            <td>B.10. Threatening, intimidating, stalking, harassing
+              or bullying any member of the university
+              community, including the use of cyber and
+              communications resources
+            </td>
+            <td>From Suspension to Exclusion
+              depending on the gravity of the
+              offense
+            </td>
+          </tr>
+
+          <tr>
+            <td> B.11.Abuse of authority/responsibility
+            </td>
+            <td> From Undertaking to Exclusion
+              depending on the gravity of the
+              offense
+            </td>
+          </tr>
+
+          <tr>
+            <td> B.12. Participating in disorder or any illegal/
+              unauthorized conduct or activity
+            </td>
+            <td>From Suspension to Exclusion
+              depending on the gravity of the
+              offense                
+              </td>
+          </tr>
+
+          <tr>
+            <td>B.13. Blackmailing or extorting money from a
+              student, faculty or any member of the
+              University community for whatever reason or
+              purpose and whether or not the objective of
+              extortion is accomplished.
+            </td>
+            <td>From Suspension to Exclusion
+              depending on the gravity of the
+              offense
+              </td>
+          </tr>
+
+          <tr>
+            <td>B.14. Misrepresentation- falsely representing
+              another person; falsely assuming the identity of
+              another person.
+            </td>
+            <td>From Suspension to Exclusion
+              depending on the gravity of the
+              offense
+            </td>
+          </tr>
+
+          <tr>
+            <td>B.15. Provoking fights/brawls between and/ or
+              among community members inside or outside
+              the campus whether or not with actual
+              participation in the fights/brawls
+            </td>
+            <td>From Suspension to Exclusion
+              depending on the gravity of the
+              offense
+            </td>
+          </tr>
+
+          <tr>
+            <td>B.16.Misuse of/ unauthorized use of University IT
+              equipment and systems.
+            </td>
+            <td>From Suspension to Exclusion
+              depending on the gravity of the
+              offense                
+              </td>
+          </tr>
+
+          <tr>
+            <td>B.17.Violation of Online Learning Instruction such
+              as but not limited to security breaches,
+              cheating etc.
+            </td>
+            <td>From Suspension to Exclusion
+              depending on the gravity of the
+              offense
+              </td>
+          </tr>
+
+        </tbody>
+    </table>
+    </div>
+
+    <div class="content" id="UnivPoli-content">
+      <div class="title">
+        <h1>Offenses Involving University policies</h1>
+      </div>
+      <table class="my-table">
+        <thead>
+            <tr>
+                <th>Offenses</th>
+                <th>Sanctions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>C.1. Violation of the dress code policies such as
+                  those related to the wearing of uniform and
+                  I.D.
+                  </td>
+                <td>From Undertaking to Exclusion
+                  </td>
+            </tr>
+
+            <tr>
+                <td>C.2. Drunkenness or drinking liquor or any
+                  alcoholic beverages within the University
+                  premises during or beyond working hours, at
+                  University functions or while on duty outside
+                  the campus.
+                  </td>
+                <td>From Suspension to Exclusion
+                  depending on the gravity of the
+                  offense
+                  </td>
+            </tr>
+
+            <tr>
+              <td>C.3. Violations of the Anti-Smoking policies of the
+                University
+              </td>
+              <td>From Undertaking to Exclusion
+                depending on the gravity of the
+                offense                
+                </td>
+            </tr>
+
+            <tr>
+              <td>C.4. Violation of Code of Confidentiality policy of
+                the University; unauthorized access and use
+                of confidential information
+              </td>
+              <td>From Suspension to Exclusion
+                depending on the gravity of the
+                offense                
+                </td>
+            </tr>
+
+            <tr>
+              <td> C.5.Receiving for personal use fees, gifts, or other
+                valuable when such fee, gifts or valuable is
+                given in the hope or expectation of receiving a
+                favor or better treatment accorded other
+                persons
+                </td>
+                <td>From Suspension to Exclusion
+                  depending on the gravity of the
+                  offense                
+                  </td>
+            </tr>
+
+            <tr>
+              <td> C.6.Soliciting any sum of money, gifts, benefits or
+                favors or anything of value from students,
+                faculty, employees, clients, suppliers, other
+                individuals, business firms and other
+                establishments, without any written
+                permission and approval from the President
+                or through the mediation of another in
+                consideration of any actor service connected
+                with the performance of his/her duties and
+                responsibilities
+                </td>
+              <td>From Suspension to Exclusion
+                depending on the gravity of the
+                offense
+                </td>
+            </tr>
+
+            <tr>
+              <td>C.7. Selling of supplies, photocopied materials,
+                books, services or the collection of any
+                contribution in any form whatsoever, whether
+                voluntary or otherwise, from the students and
+                school personnel
+              </td>
+              <td>From Suspension to Exclusion
+                depending on the gravity of the
+                offense
+                </td>
+            </tr>
+
+            <tr>
+              <td>C.8. Lending/loaning activity with co-workers,
+                agency personnel, University students or
+                members of the HAU community
+              </td>
+              <td>From Suspension to Exclusion
+                depending on the gravity of the
+                offense            
+                </td>
+            </tr>
+
+            <tr>
+              <td>C.9.Violation of policies on educational tours, field
+                trips and off-campusactivities(Appendices E
+                & F)
+                </td>
+              <td>From Suspension to Exclusion
+                depending on the gravity of the
+                offense
+                </td>
+            </tr>
+
+            <tr>
+              <td>C.10. Violation of security measures(Appendix G)
+                </td>
+              <td>From Suspension to Exclusion
+                depending on the gravity of the
+                offense
+                </td>
+            </tr>
+
+            <tr>
+              <td>C.11.Unauthorized use of facilities or the grounds
+                of the university for purposes other than their
+                primary intended use(Appendix H)
+              </td>
+              <td>From Undertaking to Exclusion
+                depending on the gravity of the
+                offense                
+                </td>
+            </tr>
+
+            <tr>
+              <td> C.12. Improper use of the grounds, facilities, and
+                or equipment of theuniversity which causes
+                damage or leads to potential damage to said
+                grounds, facility or equipment(Appendix H)
+              </td>
+              <td>From Suspension to Exclusion
+                depending on the gravity of the
+                offense     <br>
+
+                Payment for the damages
+                caused           
+                </td>
+            </tr>
+
+            <tr>
+              <td> C.13.Deliberate destruction of or causing damage
+                to the university grounds, facilities ,
+                equipment or records(Appendix H)
+                </td>
+                <td>From Suspension to Exclusion
+                  depending on the gravity of the
+                  offense     <br>
+
+                  Payment for the damages
+                  caused                  
+                  </td>
+            </tr>
+
+            <tr>
+              <td>C.14.Acts that prevent, coerce, force or intimidate
+                others from entering the campus or attending
+                classes or other school functions such as but
+                not limited to putting up, manning or
+                maintaining a barricade in order to prevent
+                entry to or exit from the school premises;
+                deliberate disruption of academic functions
+                like classes, convocations, seminars,
+                symposia, and other school activities; forcible
+                entry
+                </td>
+              <td>From Suspension to Exclusion
+                depending on the gravity of the
+                offense
+                </td>
+            </tr>
+
+            <tr>
+              <td>C.15. Cheating (Appendix I)
+              </td>
+              <td>From Under taking - Minimum
+                Penalty - zero in the
+                examination/test/quiz to failing
+                grade in the subject in which
+                he/ she was caught cheating
+                up to Maximum Penalty of
+                Exclusion. Additional sanctions
+                maybe imposed depending on
+                the gravity of the case.
+                </td>
+            </tr>
+
+            <tr>
+              <td> C.16. Distribution of printedmaterial/s and/ or
+                posting of posters and hanging
+                streamers/banners within school campus
+                without prior permission or approval from
+                designatedschoolauthorities.
+              </td>
+              <td>From Undertaking to Exclusion
+                depending on the gravity of the
+                offense            
+                </td>
+            </tr>
+
+            <tr>
+              <td>C.17. Violation on the policy on religious activities
+                </td>
+              <td>From Verbal warning and sign
+                an undertaking to for hearing/
+                investigation
+                </td>
+            </tr>
+
+            <tr>
+              <td>C.18. Violation of the Policy on Orderliness,
+                Cleanliness and Proper Use of Facilities(not
+                covered by policy on major offenses)
+                </td>
+              <td>From Verbal warning and sign
+                  an undertaking to for hearing/
+                  investigation
+              </td>
+            </tr>
+
+          <tr>
+            <td> C.19. Failure to comply with a written instruction,
+              penalty and/or sanction, as issued by the
+              University Board of Discipline without excuse
+              or justification
+            </td>
+            <td> From Verbal warning and sign
+              an undertaking to Exclusion
+              depending on the gravity of the
+              offense                
+              </td>
+          </tr>
+
+          <tr>
+            <td>C.20. Violation of HAU Student Councils
+              Constitution and By-Laws
+            </td>
+            <td>To be referred to the Grievance
+              Committee that will be created
+              by the Office of Student Affairs               
+              </td>
+          </tr>
+
+          <tr>
+            <td>C.21. Loitering along hallways during class hours
+              </td>
+              <td> From Verbal warning and sign
+                an undertaking to Exclusion
+                depending on the gravity of the
+                offense               
+                </td>
+          </tr>
+
+          <tr>
+            <td>C.22. Violation of the Policy on Decency
+              </td>
+            <td> From Verbal warning and sign
+              an undertaking to for hearing/
+              investigation
+              </td>
+          </tr>
+
+          <tr>
+            <td>C.23. Use of cellular phones or inappropriate use
+              of any electronic device/s during classes
+              and/or academic functions.
+            </td>
+            <td> From Verbal warning and sign
+              an undertaking to for hearing/
+              investigation
+              </td>
+          </tr>
+
+          <tr>
+            <td>C.24. Violation of the Policy on Curfew
+            </td>
+            <td> From Verbal warning and sign
+              an undertaking to for hearing/
+              investigation          
+              </td>
+          </tr>
+
+          <tr>
+            <td> C.25.Coercing, persuading or intimidating another
+              community member to commit any of the
+              violations prescribed in the Code of Conduct
+              and Procedures
+              </td>
+            <td>From Suspension to Exclusion
+              depending on the gravity of the
+              offense
+              </td>
+          </tr>
+
+          <tr>
+            <td> C.26.Being an accomplice or accessory to any of
+              the violations prescribed in the Code of
+              Conduct/Behavior.
+              </td>
+            <td> One (1) penalty lower than that
+              imposed against the principal
+              </td>
+          </tr>
+
+          <tr>
+            <td>C.27. Such other acts inconsistent with proper
+              behavior befitting that of an educated person
+            </td>
+            <td>From Verbal warning and sign
+              an undertaking to Exclusion
+              depending on the gravity of the
+              offense              
+              </td>
+          </tr>
+
+          <tr>
+            <td> C.28. Lending/using/borrowing an ID card/
+              registration form to another student or to an
+              outsider
+            </td>
+            <td> FromUndertakingtoExclusion
+              dependingonthegravityof the
+              offense        
+              </td>
+          </tr>
+
+          <tr>
+            <td>C.29.Commission of three (3) minor offenses.
+              </td>
+              <td>From Suspension to Exclusion
+                depending on the gravity of the
+                offense                   
+                </td>
+          </tr>
+
+          <tr>
+            <td>C.30. Violation of University health and safety
+              protocols.
+              </td>
+            <td>From Suspension to Exclusion
+                depending on the gravity of the
+                offense                   
+                </td>
+          </tr>
+  
+
+        </tbody>
+    </table>
+    </div>
+  
+    <div class="content" id="Library-content">
+      <div class="title">
+        <h1>LIBRARY OFFENSES AND PENALTY</h1>
+      </div>
+      <table class="my_table">
+        <thead>
+            <tr>
+                <th>Major Library Offenses</th>
+                <th>Minor Library Offenses</th>
+                <th>Penalty for Major Offenses</th>
+                <th>Penalty for Minor Offenses</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Using the ID of another person.</td>
+                <td>Failure to wear school ID upon entry and while inside the library.</td>
+                <td>One-month suspension for offenses # 1-11.</td>
+                <td>First offense: Oral or written reprimand.</td>
+            </tr>
+
+            <tr>
+              <td>Vandalism, defacement, destruction, and mutilation of books and other
+                library materials and facilities.</td>
+              <td>Eating and/or drinking inside the library</td>
+              <td>Cancellation of library privileges for offense # 12</td>
+              <td> Second offense: 2 weeks' suspension of library privileges.</td>
+            </tr>
+
+            <tr>
+              <td> Manipulation of IT resources such as installations and/or use of
+                unlicensed software (such as application software and games);
+                Unauthorized access to network security.</td>
+              <td>Moving and disarranging of carrels, tables, and chairs.</td>
+              <td>The cost of repair will be paid by the person who caused damages for # 2.</td>
+              <td>Third offense: Considered a major offense. The offense will refer to the
+                Office of Student Services and Affairs for due process or disciplinary
+                action after an investigation by the library</td>
+          </tr>
+
+          <tr>
+            <td>Disruptive behavior such as drunken behavior and creating disorder.</td>
+            <td>Loitering inside the reading area which may disturb library customers.</td>
+            <td> Depending on the nature of severity of the offense committed, the Library
+              Director elevates the problem to the office of Student Discipline for
+              appropriate actions.</td>
+            <td></td>
+          </tr>
+
+          <tr>
+            <td>Viewing pornographic pictures and subversive materials within the
+              premises of the library.</td>
+            <td>Littering in any area of the library.</td>
+            <td></td>
+            <td></td>
+          </tr>
+
+          <tr>
+            <td> Unauthorized use of library facilities and services (Discussion Rooms,
+              Faculty Corner, and Internet Workstation). </td>
+            <td>Creating unnecessary noise that may distract other library users.</td>
+            <td></td>
+            <td></td>
+          </tr>
+
+          <tr>
+            <td>Bringing knives or other deadly weapons in the library premises.</td>
+            <td>Poster making, sewing, sketching, making cutouts, and other art projects
+              not related to library activities. </td>
+            <td></td>
+            <td></td>
+          </tr>
+
+          <tr>
+            <td>Selling the scan materials in parts and whole from the requested library
+              document delivery services (copyright law).</td>
+            <td>Failure to comply with a written instruction, recall, penalty as issued by
+              the library.</td>
+            <td></td>
+            <td></td>
+          </tr>
+
+          <tr>
+            <td>Sharing unauthorized content of the library documents without the
+              permission from the library personnel.</td>
+            <td> Public display of affection/intimacy which may offend the feelings of others
+              in the library premises.</td>
+            <td></td>
+            <td></td>
+          </tr>
+
+          <tr>
+            <td>Cyberbullying in any library activity like orientation, library instruction
+              sessions, and webinars.</td>
+            <td>Unauthorized activities (e.g. taping/recording) within the premises of the
+              library.</td>
+            <td></td>
+            <td></td>
+          </tr>
+
+          <tr>
+            <td>Theft or stealing of library resources and equipment and other belongings.</td>
+            <td> Gaming is not allowed inside the library. (online games, playing different
+              kinds of cards)</td>
+            <td></td>
+            <td></td>
+          </tr>
+
+          <tr>
+            <td>Commission of three (3) minor offenses.</td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+
+        </tbody>
+    </table>
+    </div>
+  </div>
+</section>
+
+
+<script src="violation.js"></script>
+
+     <!-- VIOLATION PAGE -->
+</body>
+</html>

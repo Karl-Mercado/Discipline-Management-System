@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OSA-Discipline Management System</title>
+    <link rel="stylesheet" href="complaintform.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+
+<body>
+<header>
+    <div class="logo">
+        <img src="Assets/hau_logo.png" alt="HAU Logo">
+    </div>
+    <nav>
+        <a href="http://localhost/OSA_DS/frontend/client-web/home.html">HOME</a>
+        <a href="http://localhost/OSA_DS/frontend/client-web/violation.html">VIOLATIONS</a>
+        <div class="dropdown">  
+            <button class="dropbtn">FORMS</button>
+            <div class="dropdown-content">
+                 <a href="http://localhost/OSA_DS/frontend/client-web/complaintform.html">Complaint form</a>
+                <a href="http://localhost/OSA_DS/frontend/client-web/noticeform.html">Notice to explain form</a>
+            </div>
+        </div>
+        <a href="http://localhost/OSA_DS/frontend/client-web/login.html"><i class="fas fa-user"></i> LOGIN</a>
+    </nav>
+</header>
+
+<section class="complaint-form">
+    <form id="complaintForm" onsubmit="return emailSend(event);" action="complaintform.php" method="post">
+
+        <h2>COMPLAINT \ INCIDENT REPORT FORM </h2>
+        <label for="name">Complainant Name:</label>
+        <input type="text" id="ComplainantName" name="ComplainantName" placeholder="eg.Dela Cruz Juan D." required>
+
+        <label for="email">Complaint Email Add:</label>
+        <input type="email" id="ComplaintEmailAdd" name="ComplaintEmailAdd" placeholder="eg.example.hau.edu.ph" required>
+
+        <label for="department">Department:</label>
+        <select id="Department" name="Department" required>
+            <option value="">Select</option>
+            <option value="School of Computing">School of Computing</option>
+            <option value="School of Business and Accountancy">School of Business and Accountancy</option>
+            <option value="School of Education">School of Education</option>
+            <option value="School of Engineering and Architecture">School of Engineering and Architecture</option>
+            <option value="School of Nursing and Allied Medical Sciences">School of Nursing and Allied Medical Sciences</option>
+            <option value="School of Hospitality and Tourism Management">School of Hospitality and Tourism Management</option>
+            <option value="College of Criminal Justice Education and Forensics">College of Criminal Justice Education and Forensics</option>
+        </select>
+
+
+        <label for="contact">Contact No.:</label>
+        <input type="tel" id="contact" name="Contact" required> <!-- Changed name to Contact -->
+
+        <label for="course-year">Course-Year:</label>
+        <select id="CourseYear" name="CourseYear" required>
+            <option value="0">Select</option>
+            <option value="1">1st Year</option>
+            <option value="2">2nd Year</option>
+            <option value="3">3rd Year</option>
+            <option value="4">4th Year</option>
+        </select>
+
+        <label for="student-no">Student No.:</label>
+        <input type="text" id="StudentNum" name="StudentNum" required>
+
+        <label for="date">Date:</label>
+        <input type="date" id="ComplainDate" name="ComplainDate" required><br>
+
+        <label for="subject-complaint">Subject of Complaint Feedback:</label>
+        <select id="SubjectComplaint" name="SubjectComplaint" required>
+            <option value="0">Select</option>
+            <option value="1">Academic</option>
+            <option value="2">Facilities</option>
+            <option value="3">Faculty</option>
+            <option value="4">Security</option>
+            <option value="5">Student</option>
+            <option value="6">Canteen</option>
+        </select><br>
+        
+        <label for="complaint-file">Upload PDF File:</label>
+        <input type="file" id="complaint-file" name="complaint-file" accept=".pdf">
+
+        
+        <label>Complaint Details: (indicate name, time, date, witness/es if any): </label>
+        <textarea id="ComplainDetails" name="ComplainDetails" rows="4" required></textarea>
+        
+        <input type="submit" name="submit" value="Submit">
+        
+    </form>
+</section>
+<!-- END OF COMPLAINT FORM PAGE -->
+
+<script src="https://smtpjs.com/v3/smtp.js"></script>
+<script>
+    function emailSend() {
+        const ComplainantName = document.getElementById("ComplainantName").value;
+        const ComplaintEmailAdd = document.getElementById("ComplaintEmailAdd").value;
+        const Contact = document.getElementById("contact").value;
+        const CourseYear = document.getElementById("CourseYear").value;
+        const StudentNum = document.getElementById("StudentNum").value;
+        const ComplainDate = document.getElementById("ComplainDate").value;
+        const SubjectComplaint = document.getElementById("SubjectComplaint").value;
+        const ComplainDetails = document.getElementById("ComplainDetails").value;
+
+        Email.send({
+            Host: "smtp.elasticemail.com",
+            Username: "neilberces.asi@gmail.com",
+            Password: "1387B5CADD93981E7A41CCA0AD58DA1CE28E",
+            To: "sunsunhoonjay@gmail.com",
+            From: "neilberces.asi@gmail.com",
+            Subject: "New Complaintform Submitted",
+            Body: "Complaint Form Details" +
+                "<br> Complainant Name: " + ComplainantName +
+                "<br> Complaint Email Add: " + ComplaintEmailAdd +
+                "<br> Contact No.: " + Contact +
+                "<br> Course-Year: " + CourseYear +
+                "<br> Student No.: " + StudentNum +
+                "<br> Date: " + ComplainDate +
+                "<br> Subject of Complaint Feedback: " + SubjectComplaint +
+                "<br> Complaint Details: " + ComplainDetails
+
+                
+        }).then(
+            function() {
+                alert("Email sent successfully");
+                return true; // Allow form submission
+            }
+        ).catch(
+            function(error) {
+                alert("Error sending email: " + error);
+                return false; // Prevent form submission
+            }
+        );
+    }
+
+    window.onload = function() {
+    // Get URL parameters
+    const urlParams = new URLSearchParams(window.location.search);
+    const success = urlParams.get('success');
+
+    // Check if success parameter is true
+    if (success === 'true') {
+        // Display alert
+        alert("Form submitted successfully!");
+
+        // Update the complaint navigation item to show the notification badge
+        const complaintNavItem = document.querySelector('nav a[href="http://localhost/OSA_DS/frontend/client-web/admin_index.php"]');
+        complaintNavItem.innerHTML += '<span class="badge">1</span>';
+    }
+};
+
+</script>
+</body>
+</html>

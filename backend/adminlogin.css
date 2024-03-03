@@ -1,0 +1,54 @@
+/* CSS for the maroon header */
+.header {
+    background-color: maroon;
+    color: rgb(242, 242, 242);
+    padding: 20px;
+    text-align: left;
+    height: 95vh;
+    width: 15%;
+}
+
+.header h1 {
+    text-align: center;
+    font-family:Arial, Helvetica, sans-serif;
+    margin-bottom: 100px;
+
+}
+.user-icon {
+    text-align: center;
+    font-size: 90px;
+    margin-top: 50px;
+     
+}
+.navigation ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.navigation li {
+    margin-right: 15px;
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: 30px;
+}
+
+.navigation li a {
+    text-decoration: none;
+    color: #eee9e9;
+    transition: color 0.3s ease;
+    line-height: 2.9;
+
+}
+
+.navigation ul li i {
+    margin-right: 30px;  
+}
+
+.navigation ul li:hover {
+    background-color: #f0f0f06f;
+}
+
+ 
+
+ 
+

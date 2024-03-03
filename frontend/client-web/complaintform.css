@@ -1,0 +1,456 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-image: url('Assets/form1.jpg');
+    background-size: cover; /* Adjusts the background image size */
+    background-repeat: no-repeat;
+}
+
+header {
+    background-color: rgb(115, 2, 2);
+    padding: 15px;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo img {
+    width: 130px;
+    height: 120px;
+}
+
+nav {
+    display: flex;
+}
+
+nav a {
+    font-size: 24px;
+    color: white;
+    text-decoration: none;
+    margin-left: 10px;
+}
+
+/* NAVIGATIONS CSS*/
+header nav {
+    margin-right: 30px;  
+}
+
+header nav a {
+    margin-left: 40px;  
+}
+
+header .login-dropdown {
+    margin-left: 30px;  
+}
+
+header .dropdown-content {
+    padding: 30px;
+    background-color: rgb(115, 2, 2);
+}
+button.dropbtn {
+    margin-right: 140px;
+}
+nav a:hover {
+    transform: scale(1.1);
+}
+
+/* DROPDOWN CSS */
+.dropbtn {
+    background-color: rgb(115, 2, 2);
+    color: rgba(255, 255, 255, 0.985);
+    padding: 0px;
+    font-size: 24px;
+    border: none;
+    cursor: pointer;
+    margin-left: 50px;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color:  rgb(115, 2, 2);
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  .dropdown-content a {
+    color: rgb(245, 240, 240);
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  .dropdown-content a:hover {
+    background-color: rgba(146, 144, 144, 0.348);
+  }
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+
+/*FORM*/
+.complaint-form h2 {
+    font-size:30px;
+    text-align: center;
+    padding: 30px;
+    margin-top:0px;
+}
+
+.complaint-form{
+    font-size: 25px;
+    
+}
+
+form {
+    max-width: 700px;
+    margin: 50px auto;
+    padding: 70px;
+    background-color: #f9f9f9ed;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+fieldset {
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 10px;
+   
+}
+
+legend {
+    font-weight: bold;
+    
+}
+
+div {
+    margin-bottom: 10px;
+}
+
+label {
+    display: inline-block;
+    margin-bottom: 40px;
+}
+
+input[type="text"],
+textarea {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+input[type="radio"] {
+    width: 20px;
+    height: 20px;
+    border: 2px solid #999;
+}
+
+input[type="submit"] {
+    font-size: 23px;
+    width: 30%;
+    height: 50px;
+    background-color:  rgb(79 179 46);
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #b9a533;
+}
+
+input#filed {
+    height: 45px;
+    width: 25%;
+    font-size: 25px;
+     border-radius: 10px;
+}
+
+select#CourseYear {
+    height: 50px;
+    width: 21%;
+    font-size: 25px;
+}
+
+#CourseYear{
+    font-size: 20px;
+     border-radius: 10px;
+}
+
+select#SubjectComplaint {
+    height: 50px;
+    width: 44%;
+    font-size: 25px;
+     border-radius: 10px;
+}
+
+
+input#date {
+    height: 30px;
+    font-size: 25px;
+     border-radius: 10px;
+}
+
+#ComplainDate{
+     width: 33%;
+    height: 50px;
+    font-size: 25px;
+     border-radius: 10px;
+}
+
+input#contact {
+    height: 50px;
+    font-size: 25px;
+    width: 30%; border-radius: 10px;
+     border-radius: 10px;
+}
+
+input#StudentNum {
+    height: 50px;
+    margin-bottom: 20px;
+    width: 30%;
+    font-size: 25px;
+    border-radius: 10px;
+}
+
+input#ComplainantName {
+    height: 50px;
+    width: 63%;
+    font-size: 25px;
+     border-radius: 10px;
+}
+input#ComplaintEmailAdd {
+    height: 50px;
+    width: 59%;
+    font-size: 25px;
+     border-radius: 10px;
+}
+
+input#SubjectComplaint {
+    height: 45px;
+    width: 25%;
+    font-size: 25px;
+}
+
+textarea#ComplainDetails {
+    height: 150px;
+    font-size: 25px;
+     border-radius: 10px;
+    width:96%;
+    
+}
+select#Department {
+    height: 50px;
+    width: 75%;
+    font-size: 25px;
+     border-radius: 10px;
+}
+
+input#complaint-file {
+    
+    font-size:25px
+
+}
+ 
+/*--------------MOBILE RESPONSIVE--------------*/
+
+@media screen and (max-width: 600px)
+{
+    
+    header {
+        background-color: rgb(79 179 46);
+        padding: 5px;
+        color: white;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    .logo img {
+        width: 60px;
+        height: 50px;
+    }
+    
+    nav {
+        display: flex;
+    }
+    
+    nav a {
+        font-size: 10px;
+        color: white;
+        text-decoration: none;
+        margin-left: 2px;
+    }
+    
+    /* NAVIGATIONS CSS*/
+    header nav {
+        margin-right: 10px;  
+    }
+    
+    header nav a {
+        margin-left: 10px;  
+    }
+    
+    
+    nav a:hover {
+        transform: scale(1.1);
+    }
+
+    /*FORM*/
+.complaint-form h2 {
+    text-align: center;
+    padding: 10px;
+}
+
+.complaint-form{
+    font-size: 10px;
+    
+}
+
+form {
+    max-width: 270px;
+    margin: 10px auto;
+    padding: 20px;
+    background-color: #dcdada;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+fieldset {
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 10px;
+   
+}
+
+legend {
+    font-weight: bold;
+    
+}
+
+div {
+    margin-bottom: 10px;
+}
+
+label {
+    display: inline-block;
+    margin-bottom: 12px;
+}
+
+input[type="text"],
+textarea {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+input[type="radio"] {
+    width: 20px;
+    height: 20px;
+    border: 2px solid #999;
+}
+
+input[type="submit"] {
+    font-size: 10px;
+    width: 30%;
+    height: 20px;
+    background-color:  rgb(115, 2, 2);
+    color: #fff;
+    padding: 1px 10px;
+    margin-left: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #b9a533;
+}
+
+input#filed {
+    height: 45px;
+    width: 25%;
+    font-size: 25px;
+}
+
+select#CourseYear {
+    height: 15px;
+    width: 23%;
+    font-size: 10px;
+    margin-bottom: 2px;
+}
+
+#CourseYear{
+    font-size: 20px;
+}
+
+select#SubjectComplaint {
+    height: 15px;
+    width: 23%;
+    font-size: 10px;
+    margin-bottom: 2px;
+}
+
+
+input#date {
+    height: 15px;
+    font-size: 12px;
+}
+
+#ComplainDate{
+    font-size: 12px;
+}
+
+input#contact {
+    height: 15px;
+    font-size: 12px;
+    width: 27%;
+}
+
+input#StudentNum {
+    height: 15px;
+    font-size: 12px;
+    width: 27%;
+}
+
+input#ComplainantName {
+    height: 15px;
+    font-size: 12px;
+    width: 66%;
+}
+input#ComplaintEmailAdd {
+    height: 15px;
+    font-size: 12px;
+    width: 60%;
+}
+
+input#SubjectComplaint {
+    height: 45px;
+    width: 25%;
+    font-size: 25px;
+}
+
+textarea#ComplainDetails {
+    height: 90px;
+    font-size: 10px;
+}
+select#Department {
+    height: 15px;
+    width: 77%;
+    font-size: 12px;
+    margin-bottom: 2px;
+}
+
+
+
+    
+}

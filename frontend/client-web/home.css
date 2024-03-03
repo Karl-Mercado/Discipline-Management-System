@@ -1,0 +1,445 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    background-color: rgb(115, 2, 2);
+    padding: 15px;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo img {
+    width: 130px;
+    height: 120px;
+}
+
+nav {
+    display: flex;
+}
+
+nav a {
+    font-size: 24px;
+    color: white;
+    text-decoration: none;
+    margin-left: 10px;
+}
+
+/* NAVIGATIONS CSS*/
+header nav {
+    margin-right: 30px;  
+}
+
+header nav a {
+    margin-left: 40px;  
+}
+
+header .login-dropdown {
+    margin-left: 30px;  
+}
+
+header .dropdown-content {
+    padding: 30px;
+    background-color: rgb(115, 2, 2);
+}
+
+nav a:hover {
+    transform: scale(1.1);
+}
+
+/* DROPDOWN CSS */
+
+button.dropbtn {
+    margin-right: 140px !important;
+  }
+  
+.dropbtn {
+    background-color: rgb(115, 2, 2) !important;
+    color: rgba(255, 255, 255, 0.985) !important;
+    padding: 0px !important;
+    font-size: 24px !important;
+    border: none !important;
+    cursor: pointer !important;
+    margin-left: 50px !important;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color:  rgb(115, 2, 2);
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  .dropdown-content a {
+    color: rgb(245, 240, 240);
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  .dropdown-content a:hover {
+    background-color: rgba(146, 144, 144, 0.348);
+  }
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+
+/* TITLE CSS */
+.title{
+    font-size: 25px;
+    font-family: 'Times New Roman', Times, serif;
+    margin-left: 120px;
+    margin-top: 50px;
+}
+
+/* MISSION AND VISION CSS */
+.osa-section {
+    display: flex;
+    align-items: center;
+    margin-right: 100px;
+}
+
+.osa-image1 {
+    width: 100%;  
+    height: auto;  
+    max-width: 40%;  
+    display: block;  
+    margin: 0 auto;  
+    margin-left: 170px;
+    margin-bottom: 90px;
+    border-radius: 30px;
+}
+
+.osa-image2 {
+    width: 100%;  
+    height: auto;  
+    max-width: 43%;  
+    display: block;  
+    margin: 0 auto;  
+    margin-left: 100px;
+    margin-bottom: 30px;
+    border-radius: 30px;
+}
+
+.osa-mission h1{
+    font-size: 40px;
+    margin-left: 170px;
+    text-align: center;
+     
+}
+
+.osa-mission p{
+    font-size: 30px;
+    margin-left: 90px;
+    text-align: justify;
+    line-height: 1.7;
+    margin-left: 200px;
+}
+
+.osa-vision h1{
+    font-size: 40px;
+    margin-right: 100px;
+    margin-top: 100px;
+    text-align: center;
+     
+}
+
+.osa-vision p{
+    font-size: 30px;
+    margin-left: 90px;
+    text-align: justify;
+    line-height: 1.7;
+    margin-right: 100px;
+}
+
+/* STUDENT HANDBOOK CSS*/
+.handbook {
+    position: relative;
+    max-width: 33%;
+    margin: 100px auto;
+    text-align: center;
+}
+
+.handbook h1{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 45px;
+}
+
+.handbook::before,
+.handbook::after {
+    content: "";
+    height: 3px;
+    width: 50px;
+    background: rgb(127, 125, 125);
+    display: block;
+    position: absolute;
+    top: 50%;
+}
+
+.handbook::before {
+    left: 0;
+    transform: translateX(-100%); 
+    min-width: 100%; 
+}
+
+.handbook::after {
+    right: 0;
+    transform: translateX(100%);  
+    min-width: 100%; 
+}
+
+.download{
+    text-align: center;
+    font-size: 30px;
+}
+
+.handbook-image{
+    height: auto;
+    width: 23%;
+}
+
+.download a:hover {
+    background-color: #b9a533;
+    color: #fff;  
+}
+
+.download a {
+    display: inline-block;
+    width: 20%;
+    margin-top: 10px;  
+    padding: 10px 20px;
+    text-decoration: none;
+    color: #ffffff;  
+    background-color: rgb(115, 2, 2);  
+}
+
+/* FOOTERS*/
+.footer {
+    background-color: #f2f2f2;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-logo {
+    width: 100px; 
+    margin-bottom: 10px;
+}
+
+.footer-content {
+    font-size: 20px;
+}
+ 
+
+/*--------------MOBILE RESPONSIVE--------------*/
+
+@media screen and (max-width: 600px)
+{
+    
+    header {
+        background-color: rgb(115, 2, 2);
+        padding: 5px;
+        color: white;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    .logo img {
+        width: 60px;
+        height: 50px;
+    }
+    
+    nav {
+        display: flex;
+    }
+    
+    nav a {
+        font-size: 10px;
+        color: white;
+        text-decoration: none;
+        margin-left: 2px;
+    }
+    
+    /* NAVIGATIONS CSS*/
+    header nav {
+        margin-right: 10px;  
+    }
+    
+    header nav a {
+        margin-left: 10px;  
+    }
+    
+    
+    nav a:hover {
+        transform: scale(1.1);
+    }
+
+    /* TITLE CSS */
+    .title{
+      font-size: 10px;
+      font-family: 'Times New Roman', Times, serif;
+      margin-left: 15px;
+      margin-top: 20px;
+    }
+    
+    
+    /* MISSION AND VISION CSS */
+    .osa-section {
+      display: flex;
+      align-items: center;
+      margin-right: 30px;
+    }
+
+    .osa-image1 {
+        width: 50%;  
+        height: auto;  
+        max-width: 40%;  
+        display: block;  
+        margin: 0 auto; 
+        margin-top: 10px; 
+        margin-left: 20px;
+        margin-bottom: 20px;
+        border-radius: 30px;
+}
+
+.osa-image2 {
+    width: 50%;  
+    height: auto;  
+    max-width: 40%;  
+    display: block;  
+    margin: 0 auto; 
+    margin-top: 10px; 
+    margin-left: 20px;
+    margin-bottom: 20px;
+    border-radius: 30px;
+}
+
+.osa-mission h1{
+    font-size: 15px;
+    margin-left: 0px;
+    text-align: center;
+     
+}
+
+.osa-mission p{
+    font-size: 12px;
+    margin-left: 15px;
+    text-align: justify;
+    line-height: 1.7;
+}
+
+.osa-vision h1{
+    font-size: 15px;
+    margin-right: 10px;
+    margin-top: 20px;
+    text-align: center;
+     
+}
+
+.osa-vision p{
+    font-size: 12px;
+    margin-left: 15px;
+    text-align: justify;
+    line-height: 1.7;
+    margin-right: 10px;
+}
+
+/* STUDENT HANDBOOK CSS*/
+.handbook {
+    position: relative;
+    max-width: 33%;
+    margin: 50px auto;
+    text-align: center;
+}
+
+.handbook h1{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 15px;
+}
+
+.handbook::before,
+.handbook::after {
+    content: "";
+    height: 2px;
+    width: 50px;
+    background: rgb(127, 125, 125);
+    display: block;
+    position: absolute;
+    top: 50%;
+}
+
+.handbook::before {
+    left: 0;
+    transform: translateX(-100%); 
+    min-width: 100%; 
+}
+
+.handbook::after {
+    right: 0;
+    transform: translateX(100%);  
+    min-width: 100%; 
+}
+
+.download{
+    text-align: center;
+    font-size: 12px;
+    margin-bottom: 20px;
+}
+
+.handbook-image{
+    height: auto;
+    width: 33%;
+}
+
+.download a:hover {
+    background-color: #b9a533;
+    color: #fff;  
+}
+
+.download a {
+    display: inline-block;
+    width: 25%;
+    margin-top: 0px;  
+    padding: 5px 10px;
+    text-decoration: none;
+    color: #ffffff;  
+    background-color: rgb(115, 2, 2);  
+}
+
+/* FOOTERS*/
+.footer {
+    background-color: #f2f2f2;
+    padding: 5px 0;
+    text-align: center;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-logo {
+    width: 100px; 
+    margin-bottom: 10px;
+}
+
+.footer-content {
+    font-size: 12px;
+}
+
+
+    
+}
